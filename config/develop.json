@@ -1,0 +1,9 @@
+{
+    "Author": "no name",
+    "network": {
+      "port": 3001,
+      "protocol": "http",
+      "ssl_key": "privkey.pem",
+      "ssl_cert": "fullchain.pem"
+    }
+}
