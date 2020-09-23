@@ -1,0 +1,30 @@
+#!/bin/bash
+
+CWD=`pwd -P`
+
+if [ ! -e "apps/src/view/main.coffee" ]; then
+  cp libs/template/main.coffee apps/src/view/
+fi
+if [ ! -e "apps/src/control/api.coffee" ]; then
+  cp libs/template/api.coffee apps/src/control/
+fi
+if [ ! -d "config" ]; then
+  mkdir config
+fi
+if [ ! -e "config/develop.json" ]; then
+  cp libs/template/develop.json config/
+fi
+if [ ! -e "config/default.json" ]; then
+  cp libs/template/default.json config/
+fi
+
+ARG=$1
+if [ "$ARG" == "" ]; then
+  terffee -c ${CWD}/apps/src/view -c ${CWD}/libs/view -o ${CWD}/apps/js/view
+  terffee -c ${CWD}/apps/src/control -c ${CWD}/libs/control -o ${CWD}/apps/js/control
+
+elif [ "$ARG" == "-w" ]; then
+  terffee -c ${CWD}/apps/src/view -c ${CWD}/libs/view -o ${CWD}/apps/js/view -o ${CWD}/apps/js/view -c ${CWD}/apps/src/control -c ${CWD}/libs/control -o ${CWD}/apps/js/control -o ${CWD}/apps/js/control -w
+
+fi
+

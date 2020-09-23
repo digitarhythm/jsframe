@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.finger/0.1.6/jquery.finger.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      node_env = "<%= @node_env %>";
+    </script>
+    <% for f in @jsfilelist : %>
+      <script type="text/javascript" src="<%= f %>"></script>
+    <% end %>
+    <script type="text/javascript" src="view/library.min.js"></script>
+    <script type="text/javascript" src="view/main.min.js"></script>
+  </head>
+  <body style="margin: 0px 0px 0px 0px;">
+  </body>
+</html>
+

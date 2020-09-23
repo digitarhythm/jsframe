@@ -1,0 +1,12 @@
+.git
+package-lock.json
+*.js
+node_modules
+src/view/*
+config/*
+!config/.gitkeep
+!src/view/.gitkeep
+src/control/*
+!src/control/.gitkeep
+public/*
+!public/.gitkeep
